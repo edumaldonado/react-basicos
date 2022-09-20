@@ -2,9 +2,8 @@ import React,{Component} from "react";
 import data from "../helpers/data.json";
 
 function ElementoLista(props){
-    //prueba
     return(
-        <li  key = {props.index}>
+        <li  key = {props.el.id.toString()}>
             <a href={props.el.web} target = "_blank" rel="noopener noreferrer">{props.el.name}</a>
         </li>
     );
@@ -29,7 +28,7 @@ export default class RenderizadoElementos extends Component{
                 </ol>
                 <h3>Frameworks Frontend JS </h3>
                 <ul>
-                {data.frameworks.map((el,index) => (<ElementoLista index ={index} el ={el} /> ))}
+                {data.frameworks.map((el) => (<ElementoLista el ={el} /> ))}
                 </ul>
             </div>   
         );

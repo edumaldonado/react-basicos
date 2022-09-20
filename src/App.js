@@ -7,7 +7,8 @@ import RenderizadoCondicional from './Components/RenderizadoCondicional';
 import RenderizadoElementos from './Components/RenderizadoElementos';
 import {EventosES6,EventosES7,MasSobreEventos} from './Components/Eventos';
 import Padre from './Components/ComunicacionComponentes';
-
+import CicloVida from './Components/CicloVida';
+import AjaxApis from './Components/AjaxApis';
 
 
 import './App.css';
@@ -58,6 +59,10 @@ function App() {
           <MasSobreEventos />                    
           <hr/>
           <Padre />                    
+          <hr/>
+          <CicloVida />      
+          <hr/>
+          <AjaxApis />                           
       </section>  
       </header>
 

@@ -32,10 +32,10 @@ componentDidMount(){
                     name: json.name,
                     avatar:json.sprites.front_default,
                 }
-                console.log("--------------------------------");
-                console.log(pokemon);
+                //console.log("--------------------------------");
+                //console.log(pokemon);
                 let pokemons = [...this.state.pokemons,pokemon];
-               console.log(pokemons);                
+               //console.log(pokemons);                
                 this.setState({pokemons});
 
             });

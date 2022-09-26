@@ -8,6 +8,7 @@ export default function ScrollHooks (props){
 
         const detectarScroll = ()=> setScrollY(window.pageYOffset)
         window.addEventListener("scroll",detectarScroll);
+        return()=>{window.removeEventListener("scroll",detectarScroll)}   // (return)esta linea ejecuta el código en la fase de desmontaje
     },[scrollY]);       //este useEffect se va a ejecutar cuando la variable scrollY se actualice
     useEffect(()=>{
         console.log("Fase de Montaje");
@@ -15,7 +16,13 @@ export default function ScrollHooks (props){
 
     useEffect(()=>{
         console.log("Fase de actualizacion");
-    });                 //  sin parametros cada vez que se renderize el componente se va a ejecutar este useEffect
+    });   
+    useEffect(()=>{
+        return()=>{      // (return)esta linea ejecuta el código en la fase de desmontaje
+            console.log("Fase de desmontaje");
+
+        }
+    });               
     return(
         <>
         <h2> Hoock - useEffect y el Ciclo de Vida</h2>

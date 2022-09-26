@@ -1,6 +1,7 @@
 import React, {Component} from  "react";
 
 class Reloj extends Component{
+    // eslint-disable-next-line no-useless-constructor
     constructor(props){
         super(props);
     }
@@ -60,7 +61,7 @@ export default class CicloVida extends Component{
         return(
             <>
                 <h2> Ciclo de Vida de loa componentes de Clase</h2>
-                {this.state.visible && <Reloj hora = {this.state.hora}/>  }
+                {this.state.visible && <Reloj hora ={this.state.hora} />}  
                 <button onClick = {this.iniciar}>Iniciar</button>
                 <button onClick = {this.detener}>Detener</button>
             </>

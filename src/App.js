@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from './logo.svg';
+import './App.css';
 import Componente from './Components/Componente';
 import Propiedades from './Components/Propiedades';
 import Estado from './Components/Estado';
@@ -11,10 +12,10 @@ import CicloVida from './Components/CicloVida';
 import AjaxApis from './Components/AjaxApis';
 import ContadorHooks from './Components/ContadorHooks';
 import ScrollHooks from './Components/ScrollHooks';
+import RelojHooks from './Components/RelojHooks';
+import AjaxHooks from './Components/AjaxHooks';
+import HooksPersonalizados from './Components/HooksPersonalizados';
 
-
-
-import './App.css';
 
 
 function App() {
@@ -70,7 +71,13 @@ function App() {
           <ContadorHooks titulo = "seguidores"  />      
           <hr/>
           <ScrollHooks />    
-                                
+          <hr/>
+          <RelojHooks />
+          <hr/>
+          <AjaxHooks/>  
+          <hr/>
+          <HooksPersonalizados/>                                 
+          
       </section>  
       </header>
 

@@ -15,23 +15,23 @@ export const useFetch = (url)=>{
                         throw{err:true,
                               status:res.status,
                               statusText: !res.statusText? "Ocurrio un error" :res.statusText,
-                             }
+                        };
                     }
 
                     let data = await res.json(); 
                     setIsPending(false);
                     setData(data);
                     setError({err:false});
-
-
                 }                    
                 catch(err){
                     setIsPending(true);
                     setError(err);
                 };
-    
-        getData(url);        
+            };
+            getData(url);   
+            
     }, [url]);
-    return{data,isPending,error}
+
+    return{data,isPending,error};
 
 };

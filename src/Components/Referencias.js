@@ -3,7 +3,7 @@ import React,{useRef} from "react";
 export default function Referencias(){
 let refMenu = useRef(),
     refMenuBtn = useRef();
-
+    console.log(refMenuBtn);
 const handleToggleMenu = (e)=>{
 
     if(refMenuBtn.current.textContent ==="menu"){
@@ -43,7 +43,7 @@ import React from "react";
 
 export default function Referencias(){
 const handleToggleMenu = (e)=>{
-//    const $menu  = document.getElementById("menu");
+    const $menu  = document.getElementById("menu");
     if(e.target.textContent ==="menu"){
         e.target.textContent ="Cerrar";
         $menu.style.display= "block"
@@ -56,8 +56,8 @@ const handleToggleMenu = (e)=>{
 return(
     <>
     <h2>Referencias</h2>
-    <button id="menu-btn" ref={refMenuBtn} onClick={handleToggleMenu} > Menú</button>
-    <nav id = "menu" ref={refMenu} display = {{display:"none"}}>
+    <button id="menu-btn" onClick={handleToggleMenu} > Menú</button>
+    <nav id = "menu" display = {{display:"none"}}>
         <a href="#">Sección 1</a>
         <br/>
         <a href="#">Sección 2</a>
